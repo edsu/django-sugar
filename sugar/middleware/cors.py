@@ -18,17 +18,17 @@ class CORSMiddleware(object):
 
     1. Add to ``settings.MIDDLEWARE_CLASSES``::
 
-        'sugar.middleware.cors.CORSMiddleware',
+       'sugar.middleware.cors.CORSMiddleware',
 
     2. Optionally, configure ``settings.CORS_PATHS`` if the default settings
-        aren't appropriate for your application. ``CORS_PATHS`` should be a
-        list of (path, content_types, headers) values where content_types and
-        headers are lists of mime types and (key, value) pairs, respectively.
+       aren't appropriate for your application. ``CORS_PATHS`` should be a
+       list of (path, content_types, headers) values where content_types and
+       headers are lists of mime types and (key, value) pairs, respectively.
 
-        Processing occurs first to last so you should order ``CORS_PATHS``
-        items from most to least specific.
+       Processing occurs first to last so you should order ``CORS_PATHS``
+       items from most to least specific.
 
-        See ``DEFAULT_CORS_PATHS`` for an example.
+       See ``DEFAULT_CORS_PATHS`` for an example.
 
     Notes
     -----
@@ -36,6 +36,7 @@ class CORSMiddleware(object):
     * Although not officially a feature, the headers are not restricted to
       the CORS spec and could conceivably include other values such as
       desired (allowing, for example, custom ``Cache-Control`` settings).
+
     """
 
     def __init__(self):
